@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Denise's Florist — Loughborough's most highly rated luxury florist</title>
+<meta name="description" content="Hand-tied seasonal bouquets, wedding flowers and funeral tributes from 49 Nottingham Road, Loughborough. Same-day delivery across Charnwood. 30 years in the trade.">
+<meta name="theme-color" content="#4f4b4f">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FBF8F2;
+    --cream:#F1ECDF;
+    --sage:#D6DBC7;
+    --sage-deep:#8FA083;
+    --moss:#5B6A4B;
+    --walnut:#5B4A3A;
+    --ink:#2A2522;
+    --char:#4f4b4f;
+    --red:#8E3B22;
+    --rule:rgba(42,37,34,.18);
+    --display:"Cormorant Garamond", "EB Garamond", Georgia, serif;
+    --body:"Jost", system-ui, sans-serif;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--body);
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.55;
+    font-weight:400;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    overflow-x:hidden;
+  }
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.5;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.16 0 0 0 0 0.14 0 0 0 0 0.13 0 0 0 0.06 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    mix-blend-mode:multiply;
+  }
+  h1,h2,h3,h4{font-family:var(--display);font-weight:500;line-height:1.02;letter-spacing:-.01em;text-wrap:balance}
+  p{text-wrap:pretty;hyphens:auto}
+  a{color:inherit}
+
+  /* layout */
+  .wrap{max-width:1280px;margin:0 auto;padding:0 clamp(1rem,4vw,3rem);position:relative;z-index:2}
+
+  /* nav */
+  nav.top{
+    padding:1.4rem 0 1rem;
+    display:flex;align-items:baseline;justify-content:space-between;
+    border-bottom:1px solid var(--rule);
+  }
+  nav.top .mark{
+    font-family:var(--display);font-style:italic;font-weight:500;
+    font-size:1.55rem;letter-spacing:-.02em;
+  }
+  nav.top .mark span{font-style:normal;font-weight:300;letter-spacing:.02em;font-size:.75em;display:block;color:var(--walnut);text-transform:uppercase;margin-top:-.2rem}
+  nav.top ul{list-style:none;display:flex;gap:1.8rem;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--walnut)}
+  nav.top a{text-decoration:none;padding:.2rem 0;border-bottom:1px solid transparent;transition:border-color .2s}
+  nav.top a:hover{border-bottom-color:var(--walnut)}
+  nav.top .tel{
+    font-family:var(--body);font-size:.95rem;font-weight:500;
+    color:var(--ink);text-decoration:none;letter-spacing:.04em;
+    border:1px solid var(--ink);padding:.5rem 1rem;border-radius:999px;
+    transition:background .25s,color .25s;
+  }
+  nav.top .tel:hover{background:var(--ink);color:var(--paper)}
+  @media(max-width:780px){
+    nav.top{flex-wrap:wrap;gap:.8rem}
+    nav.top ul{display:none}
+    nav.top .tel{font-size:.85rem;padding:.4rem .8rem}
+  }
+
+  /* hero */
+  .hero{
+    padding:clamp(2rem,5vw,4rem) 0 clamp(2.5rem,7vw,6rem);
+    display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(1rem,4vw,3rem);align-items:end;
+  }
+  @media(max-width:880px){.hero{grid-template-columns:1fr}}
+  .hero .eyebrow{
+    font-size:.74rem;letter-spacing:.28em;text-transform:uppercase;color:var(--moss);
+    margin-bottom:1.3rem;display:flex;align-items:center;gap:.7rem;
+  }
+  .hero .eyebrow::before{content:"";display:inline-block;width:32px;height:1px;background:var(--moss)}
+  .hero h1{
+    font-size:clamp(3.4rem, 11.5vw, 11rem);
+    line-height:.88;letter-spacing:-.03em;
+    font-weight:300;
+  }
+  .hero h1 .swash{font-style:italic;font-weight:300;color:var(--moss)}
+  .hero h1 .accent{font-style:italic;font-weight:300;font-size:.62em;display:block;margin-top:.2em;color:var(--walnut)}
+  .hero .meta{
+    margin-top:2rem;display:flex;flex-wrap:wrap;gap:1.6rem 2.4rem;align-items:baseline;
+    font-size:.95rem;color:var(--walnut);
+  }
+  .hero .meta strong{display:block;font-family:var(--display);font-style:italic;font-size:1.35rem;color:var(--ink);font-weight:500;letter-spacing:-.01em}
+  .hero .meta .pill{
+    background:var(--moss);color:var(--paper);
+    padding:.55rem 1.1rem;border-radius:999px;font-size:.78rem;
+    letter-spacing:.15em;text-transform:uppercase;
+  }
+
+  .hero .botanical{
+    position:relative;aspect-ratio:3/4;max-height:560px;align-self:end;
+  }
+  .hero .botanical svg{width:100%;height:100%;display:block}
+  @media(max-width:880px){.hero .botanical{aspect-ratio:5/4;max-height:380px;margin-top:1rem}}
+
+  /* marquee */
+  .marquee{
+    background:var(--moss);color:var(--paper);
+    padding:1.4rem 0;overflow:hidden;
+    border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+  }
+  .marquee__track{
+    display:flex;gap:3rem;white-space:nowrap;width:max-content;
+    animation:scroll 50s linear infinite;
+    font-family:var(--display);font-style:italic;font-size:clamp(1.3rem,2.6vw,1.9rem);font-weight:400;letter-spacing:-.01em;
+  }
+  .marquee__track span{display:inline-flex;align-items:center;gap:3rem}
+  .marquee__track span::after{content:"❀";color:var(--sage);font-style:normal;font-size:.7em}
+  @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @media(prefers-reduced-motion:reduce){.marquee__track{animation-duration:0s}}
+
+  /* sections */
+  section{padding:clamp(4rem,9vw,8rem) 0;position:relative}
+  .slab-cream{background:var(--cream)}
+  .slab-sage{background:var(--sage);color:var(--ink)}
+
+  .section-head{display:grid;grid-template-columns:1fr 2fr;gap:clamp(1rem,4vw,4rem);margin-bottom:clamp(2.5rem,6vw,5rem);align-items:start}
+  @media(max-width:780px){.section-head{grid-template-columns:1fr}}
+  .section-head .lab{
+    font-size:.74rem;letter-spacing:.28em;text-transform:uppercase;color:var(--walnut);
+    font-weight:500;padding-top:1rem;border-top:1px solid var(--rule);
+  }
+  .section-head h2{font-size:clamp(2.2rem,5.5vw,4.8rem);letter-spacing:-.025em;font-weight:300}
+  .section-head h2 em{color:var(--moss)}
+
+  /* services as editorial broadsheet */
+  .services{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--rule)}
+  @media(max-width:980px){.services{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.services{grid-template-columns:1fr}}
+  .service{
+    padding:clamp(1.6rem,3vw,2.5rem) clamp(1rem,2vw,1.8rem);
+    border-right:1px solid var(--rule);
+    border-bottom:1px solid var(--rule);
+    display:flex;flex-direction:column;gap:1rem;min-height:280px;
+    transition:background .25s;
+  }
+  .service:hover{background:var(--paper)}
+  .service:nth-child(4n){border-right:none}
+  @media(max-width:980px){
+    .service{border-right:1px solid var(--rule)}
+    .service:nth-child(2n){border-right:none}
+  }
+  @media(max-width:520px){.service{border-right:none}}
+  .service .num{
+    font-family:var(--display);font-style:italic;font-size:1rem;color:var(--moss);font-weight:300;
+    letter-spacing:.02em;
+  }
+  .service h3{font-size:clamp(1.6rem,2.6vw,2.2rem);font-weight:400;letter-spacing:-.01em}
+  .service h3 em{font-style:italic;color:var(--moss)}
+  .service p{font-size:.95rem;color:var(--walnut);margin-top:auto}
+  .service .icon{width:42px;height:42px;color:var(--moss);opacity:.85}
+
+  /* About / story */
+  .story{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,6rem);align-items:center}
+  @media(max-width:880px){.story{grid-template-columns:1fr}}
+  .story .quote{
+    font-family:var(--display);font-style:italic;font-weight:300;
+    font-size:clamp(1.7rem,3.4vw,2.6rem);line-height:1.18;letter-spacing:-.01em;
+    color:var(--ink);
+  }
+  .story .quote .drop{
+    font-size:1.8em;line-height:.8;float:left;margin:.1em .15em 0 -.05em;color:var(--moss);
+  }
+  .story .stat{
+    display:flex;gap:1.6rem;align-items:baseline;border-top:1px solid var(--rule);padding-top:1.4rem;margin-top:2rem;
+  }
+  .story .stat .big{font-family:var(--display);font-size:clamp(3rem,7vw,5.5rem);line-height:1;color:var(--moss);font-weight:400;letter-spacing:-.03em}
+  .story .stat .lbl{font-size:.82rem;letter-spacing:.2em;text-transform:uppercase;color:var(--walnut)}
+
+  /* Testimonials */
+  .reviews{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,4vw,4rem)}
+  @media(max-width:780px){.reviews{grid-template-columns:1fr}}
+  .review{
+    padding:clamp(1.8rem,3vw,2.6rem);
+    background:var(--paper);border:1px solid var(--rule);
+    position:relative;
+  }
+  .review::before{
+    content:"“";font-family:var(--display);font-style:italic;
+    position:absolute;top:.2rem;left:1.2rem;font-size:5rem;color:var(--sage-deep);line-height:1;
+  }
+  .review p{
+    font-family:var(--display);font-style:italic;font-size:1.2rem;line-height:1.45;font-weight:400;
+    color:var(--ink);margin-top:1rem;position:relative;z-index:1;
+  }
+  .review cite{
+    display:block;margin-top:1.4rem;font-style:normal;
+    font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--walnut);
+  }
+
+  /* Visit / contact */
+  .visit-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:clamp(2rem,6vw,5rem)}
+  @media(max-width:880px){.visit-grid{grid-template-columns:1fr}}
+  .visit-grid h2{font-size:clamp(2.4rem,5.5vw,5rem);font-weight:300;letter-spacing:-.025em}
+  .visit-grid h2 em{color:var(--moss)}
+  .visit-card{
+    background:var(--paper);padding:clamp(1.6rem,3vw,2.4rem);
+    border:1px solid var(--rule);
+  }
+  .visit-card h4{
+    font-family:var(--body);font-size:.74rem;letter-spacing:.28em;text-transform:uppercase;
+    color:var(--moss);margin-bottom:.6rem;font-weight:500;
+  }
+  .visit-card .line{font-family:var(--display);font-size:1.55rem;line-height:1.25;font-weight:400;letter-spacing:-.005em;color:var(--ink)}
+  .visit-card .line a{text-decoration:none;border-bottom:1px solid var(--moss);transition:color .2s}
+  .visit-card .line a:hover{color:var(--moss)}
+  .visit-card + .visit-card{margin-top:1rem}
+
+  /* Footer */
+  footer{
+    background:var(--ink);color:var(--paper);
+    padding:clamp(3rem,6vw,5rem) 0 2rem;
+  }
+  footer::before{
+    content:"";display:block;height:2px;background:var(--moss);width:50px;margin-bottom:2rem;
+  }
+  footer .letterhead{
+    display:grid;grid-template-columns:1fr 1fr;gap:3rem;
+  }
+  @media(max-width:780px){footer .letterhead{grid-template-columns:1fr;gap:2rem}}
+  footer .name{
+    font-family:var(--display);font-style:italic;font-size:clamp(2.4rem,5vw,3.4rem);font-weight:300;line-height:1;letter-spacing:-.01em;
+  }
+  footer .sub{
+    font-family:var(--body);font-size:.78rem;letter-spacing:.28em;text-transform:uppercase;
+    color:var(--sage);margin-top:.6rem;
+  }
+  footer .addr{
+    font-family:var(--display);font-size:1.25rem;line-height:1.5;font-weight:400;color:var(--paper);
+  }
+  footer .addr a{text-decoration:none;color:var(--sage)}
+  footer .addr a:hover{color:var(--paper)}
+  footer .meta-foot{
+    margin-top:3rem;padding-top:1.5rem;border-top:1px solid rgba(251,248,242,.15);
+    font-size:.78rem;letter-spacing:.12em;color:rgba(251,248,242,.5);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;
+  }
+
+  /* scroll reveal */
+  @supports (animation-timeline:view()){
+    .reveal{animation:rise both;animation-timeline:view();animation-range:entry 0% cover 25%}
+    @keyframes rise{from{opacity:0;transform:translateY(2.2rem)}to{opacity:1;transform:none}}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav class="top">
+    <div class="mark">
+      Denise's<span>Florist · Loughborough</span>
+    </div>
+    <ul>
+      <li><a href="#seasonal">Seasonal</a></li>
+      <li><a href="#story">Our story</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+    <a class="tel" href="tel:01509264442">01509 264442</a>
+  </nav>
+</div>
+
+<header class="wrap hero">
+  <div>
+    <div class="eyebrow">Established trade · Nottingham Road, LE11</div>
+    <h1>
+      <span class="swash">Loughborough's</span><br>
+      most highly rated<br>
+      <span class="accent">luxury florist.</span>
+    </h1>
+    <div class="meta">
+      <div>
+        <strong>Hand-tied, by hand.</strong>
+        Bouquets arranged the morning of delivery.
+      </div>
+      <span class="pill">Order by 9pm · next-day delivery</span>
+    </div>
+  </div>
+
+  <div class="botanical" aria-hidden="true">
+    <!-- Editorial botanical line illustration -->
+    <svg viewBox="0 0 320 480" fill="none" xmlns="http://www.w3.org/2000/svg" stroke-linecap="round" stroke-linejoin="round">
+      <!-- main long stem -->
+      <path d="M165 470 C 165 360, 168 280, 158 180" stroke="#5B6A4B" stroke-width="2.2"/>
+      <!-- second stem -->
+      <path d="M180 470 C 195 380, 215 300, 232 220" stroke="#5B6A4B" stroke-width="2"/>
+      <!-- third stem -->
+      <path d="M150 470 C 130 380, 110 320, 92 250" stroke="#5B6A4B" stroke-width="2"/>
+      <!-- leaves on main stem -->
+      <path d="M158 380 C 130 370, 110 350, 98 320 C 122 332, 145 354, 162 372" fill="#8FA083" opacity=".85"/>
+      <path d="M162 320 C 192 312, 215 295, 226 270 C 200 280, 178 298, 164 314" fill="#8FA083" opacity=".75"/>
+      <path d="M160 250 C 132 246, 110 235, 96 215 C 122 222, 144 234, 162 244" fill="#8FA083" opacity=".7"/>
+      <!-- second stem leaves -->
+      <path d="M210 320 C 232 308, 248 290, 254 268 C 234 278, 216 296, 208 312" fill="#8FA083" opacity=".7"/>
+      <path d="M215 380 C 188 372, 168 354, 158 332 C 180 344, 200 364, 214 376" fill="#8FA083" opacity=".7"/>
+      <!-- peony flower head main -->
+      <g transform="translate(158 175)">
+        <ellipse cx="0" cy="0" rx="58" ry="52" fill="#D6DBC7"/>
+        <path d="M0 -50 C 18 -42, 35 -28, 38 -10 C 30 -22, 18 -32, 0 -36 C -18 -32, -30 -22, -38 -10 C -35 -28, -18 -42, 0 -50Z" fill="#F1ECDF"/>
+        <path d="M-46 -10 C -42 12, -32 28, -16 36 C -28 22, -36 6, -36 -10 Z" fill="#F1ECDF" opacity=".9"/>
+        <path d="M46 -10 C 42 12, 32 28, 16 36 C 28 22, 36 6, 36 -10 Z" fill="#F1ECDF" opacity=".9"/>
+        <path d="M-24 30 C -8 42, 8 42, 24 30 C 12 38, -12 38, -24 30Z" fill="#F1ECDF" opacity=".85"/>
+        <circle cx="0" cy="-2" r="14" fill="#8FA083"/>
+        <circle cx="0" cy="-2" r="6" fill="#5B6A4B"/>
+      </g>
+      <!-- dahlia bud right -->
+      <g transform="translate(232 218)">
+        <circle cx="0" cy="0" r="22" fill="#8E3B22" opacity=".82"/>
+        <path d="M-18 -4 C -12 -18, 6 -22, 16 -10 C 10 -14, -4 -16, -18 -4Z" fill="#5B4A3A" opacity=".55"/>
+        <circle cx="0" cy="0" r="8" fill="#2A2522"/>
+      </g>
+      <!-- small bud left -->
+      <g transform="translate(92 252)">
+        <ellipse cx="0" cy="0" rx="14" ry="18" fill="#F1ECDF"/>
+        <path d="M0 -16 C 6 -14, 11 -8, 11 0 C 11 8, 6 14, 0 16 C -6 14, -11 8, -11 0 C -11 -8, -6 -14, 0 -16Z" fill="none" stroke="#5B6A4B" stroke-width="1.2"/>
+        <path d="M-7 -2 C -2 -6, 3 -6, 7 -2" stroke="#5B6A4B" stroke-width="1.2" fill="none"/>
+      </g>
+      <!-- ribbon -->
+      <path d="M125 460 C 145 450, 200 450, 220 462" stroke="#5B4A3A" stroke-width="2.2" fill="none"/>
+      <path d="M125 460 L 115 478 L 132 470" stroke="#5B4A3A" stroke-width="1.6" fill="none"/>
+      <path d="M220 462 L 232 478 L 215 472" stroke="#5B4A3A" stroke-width="1.6" fill="none"/>
+    </svg>
+  </div>
+</header>
+
+<!-- delivery village marquee -->
+<div class="marquee" aria-label="Delivery villages">
+  <div class="marquee__track">
+    <span>Quorn</span><span>Shepshed</span><span>Nanpantan</span><span>Kegworth</span><span>Cropston</span><span>Swithland</span><span>Woodhouse Eaves</span><span>Mountsorrel</span><span>Rothley</span><span>Sileby</span><span>Barrow upon Soar</span><span>Walton on the Wolds</span><span>Wymeswold</span><span>East Leake</span><span>Sutton Bonington</span><span>Hathern</span>
+    <span>Quorn</span><span>Shepshed</span><span>Nanpantan</span><span>Kegworth</span><span>Cropston</span><span>Swithland</span><span>Woodhouse Eaves</span><span>Mountsorrel</span><span>Rothley</span><span>Sileby</span><span>Barrow upon Soar</span><span>Walton on the Wolds</span><span>Wymeswold</span><span>East Leake</span><span>Sutton Bonington</span><span>Hathern</span>
+  </div>
+</div>
+
+<!-- services -->
+<section id="seasonal" class="slab-cream">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="lab">001 — Through the year</div>
+      <h2>Seasonal flowers, <em>brought in fresh almost daily.</em></h2>
+    </div>
+    <div class="services">
+      <article class="service reveal">
+        <svg class="icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M20 6 C 24 12, 30 14, 30 22 C 30 28, 25 32, 20 32 C 15 32, 10 28, 10 22 C 10 14, 16 12, 20 6Z"/>
+          <path d="M20 18 L 20 32"/><path d="M16 28 C 18 30, 22 30, 24 28"/>
+        </svg>
+        <span class="num">№ 01</span>
+        <h3>Hand-tied <em>bouquets</em></h3>
+        <p>Beautiful seasonal flowers, expertly arranged and perfectly presented for birthdays, anniversaries, new babies, thank-yous and just-because.</p>
+      </article>
+
+      <article class="service reveal">
+        <svg class="icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6">
+          <circle cx="14" cy="20" r="6"/><circle cx="26" cy="20" r="6"/>
+          <path d="M10 26 L 4 34"/><path d="M30 26 L 36 34"/><path d="M20 14 L 20 8"/>
+        </svg>
+        <span class="num">№ 02</span>
+        <h3>Wedding <em>flowers</em></h3>
+        <p>Bridal bouquets, buttonholes, ceremony arrangements and reception florals. Booked in advance and made just for the day.</p>
+      </article>
+
+      <article class="service reveal">
+        <svg class="icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6">
+          <rect x="6" y="14" width="28" height="14" rx="1"/>
+          <path d="M12 14 L 12 10"/><path d="M28 14 L 28 10"/>
+          <path d="M14 21 C 17 18, 23 18, 26 21"/>
+        </svg>
+        <span class="num">№ 03</span>
+        <h3>Funeral <em>tributes</em></h3>
+        <p>Standard and bespoke tributes including caskets, sheaves and posies. Quietly arranged, honestly priced, delivered with care.</p>
+      </article>
+
+      <article class="service reveal">
+        <svg class="icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M20 6 L 20 18"/><circle cx="20" cy="22" r="4"/>
+          <path d="M14 26 L 14 34"/><path d="M26 26 L 26 34"/><path d="M14 30 L 26 30"/>
+        </svg>
+        <span class="num">№ 04</span>
+        <h3>Bespoke <em>by request</em></h3>
+        <p>Call us for something unique — your colour scheme, your flowers, your occasion. Add chocolates, balloons, teddies or a stylish vase.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- story -->
+<section id="story">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="lab">002 — Nottingham Road, est. local</div>
+      <h2><em>Thirty years</em> in the trade — and not a flower out of place.</h2>
+    </div>
+    <div class="story">
+      <div class="reveal">
+        <p class="quote">
+          <span class="drop">A</span>passionate, properly local florist — fresh deliveries almost every day so that what we hand you on the doorstep lasts and lasts. We've been arranging flowers from this corner of Loughborough for the best part of three decades, and we still answer the phone ourselves.
+        </p>
+        <div class="stat">
+          <span class="big">30+</span>
+          <span class="lbl">years arranging flowers<br>from one Loughborough shop</span>
+        </div>
+      </div>
+      <div class="reveal">
+        <svg viewBox="0 0 320 320" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <!-- decorative botanical wreath -->
+          <circle cx="160" cy="160" r="120" stroke="#5B6A4B" stroke-width="1.4" stroke-dasharray="3 6" opacity=".5"/>
+          <g stroke="#5B6A4B" stroke-width="2" fill="none">
+            <path d="M40 160 C 60 120, 100 100, 160 100"/>
+            <path d="M280 160 C 260 200, 220 220, 160 220"/>
+          </g>
+          <g fill="#8FA083">
+            <ellipse cx="60" cy="140" rx="14" ry="8" transform="rotate(-30 60 140)"/>
+            <ellipse cx="90" cy="115" rx="14" ry="8" transform="rotate(-15 90 115)"/>
+            <ellipse cx="125" cy="102" rx="14" ry="8" transform="rotate(-5 125 102)"/>
+            <ellipse cx="260" cy="180" rx="14" ry="8" transform="rotate(150 260 180)"/>
+            <ellipse cx="230" cy="205" rx="14" ry="8" transform="rotate(165 230 205)"/>
+            <ellipse cx="195" cy="218" rx="14" ry="8" transform="rotate(175 195 218)"/>
+          </g>
+          <g transform="translate(160 160)">
+            <ellipse rx="48" ry="44" fill="#F1ECDF" stroke="#5B6A4B" stroke-width="1.2"/>
+            <path d="M0 -40 C 14 -34, 26 -22, 28 -8 C 22 -18, 12 -26, 0 -28 C -12 -26, -22 -18, -28 -8 C -26 -22, -14 -34, 0 -40Z" fill="#D6DBC7"/>
+            <circle r="10" fill="#8FA083"/>
+            <circle r="4" fill="#5B4A3A"/>
+            <text x="0" y="58" text-anchor="middle" font-family="Cormorant Garamond, serif" font-style="italic" font-size="14" fill="#5B4A3A">Loughborough · since the trade was learnt</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- testimonials -->
+<section id="reviews" class="slab-sage">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="lab">003 — What people say</div>
+      <h2>Words from <em>real customers,</em> on the doorstep and at the door.</h2>
+    </div>
+    <div class="reviews">
+      <blockquote class="review reveal">
+        <p>Fabulous delivery of quality flowers, most of which lasted nearly three weeks. Thank you.</p>
+        <cite>— Alison Scoble</cite>
+      </blockquote>
+      <blockquote class="review reveal">
+        <p>Beautiful arrangement, beautifully presented, and the customer service was second to none.</p>
+        <cite>— Evie Tomlinson</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- visit -->
+<section id="visit">
+  <div class="wrap">
+    <div class="visit-grid">
+      <div class="reveal">
+        <div class="lab" style="font-size:.74rem;letter-spacing:.28em;text-transform:uppercase;color:var(--walnut);font-weight:500;margin-bottom:1.2rem">004 — Find us</div>
+        <h2>49 Nottingham Road,<br><em>Loughborough.</em></h2>
+        <p style="margin-top:1.4rem;max-width:34rem;color:var(--walnut);font-size:1.05rem">Click-and-collect from the shop, or have us deliver across Quorn, Shepshed, the Charnwood villages and out to East Leake, Sutton Bonington and Hathern. Delivery six days a week, plus Mothering Sunday and Valentine's Day.</p>
+      </div>
+      <div class="reveal">
+        <div class="visit-card">
+          <h4>Call the shop</h4>
+          <p class="line"><a href="tel:01509264442">01509 264442</a></p>
+        </div>
+        <div class="visit-card">
+          <h4>The shop</h4>
+          <p class="line">49 Nottingham Road,<br>Loughborough,<br>Leicestershire LE11 1ER</p>
+        </div>
+        <div class="visit-card">
+          <h4>Next-day cut-off</h4>
+          <p class="line">9 p.m., every day · Mon–Sat delivery</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="letterhead">
+      <div>
+        <div class="name">Denise's Florist</div>
+        <div class="sub">Loughborough · Charnwood · LE11</div>
+      </div>
+      <div class="addr">
+        49 Nottingham Road<br>
+        Loughborough, Leicestershire LE11 1ER<br>
+        <a href="tel:01509264442">01509 264442</a>
+      </div>
+    </div>
+    <div class="meta-foot">
+      <span>Hand-tied, expertly arranged, perfectly presented.</span>
+      <span>© Denise's Florist · Loughborough's most highly rated luxury florist.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
